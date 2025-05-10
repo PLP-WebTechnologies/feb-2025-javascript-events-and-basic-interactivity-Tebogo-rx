@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Section and Tabs Container */
+section {
+    position: relative;
+    background-color: #8a6729;
+    padding: 30px 10%;
+    min-height: 100vh;
+}
+section h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ebc8b3;
+}
+
+/* Tab Buttons (Project 2 styles) */
+.tab-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+.tab-list {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8a6729;
+    background-color: #ebc8b3;
+    padding: 10px;
+    border-bottom: 3px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+    font-size: 20px;
+}
+.tab-list.active {
+    border-bottom-color: #0ef;
+    color: #0ef;
+    background: #ebc8b3;
+    opacity: 1;
+}
+
+/* Tab Content Wrapper */
+.tab-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 550px;
+}
+
+/* Tab Item (content panels) */
+.tab-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ebc8b3;
+    color: #8a6729;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.8);
+    min-height: 650px;
+    overflow-y: auto;
+}
+.tab-item.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.5s;
+}
+.tab-item h4 {
+    margin-bottom: 20px;
+    color: #8a6729;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #8a6729;
+    color: white;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0ef;
+}
+#hoverBtn {
+    background-color: #0ef;
+}
+
+/* Form error messages */
+.error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Password*/
+#passwordRules {
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 0;
+    font-size: 14px;
+}
+
+#passwordRules li {
+    margin-bottom: 5px;
+}
+
+.valid {
+    color: green;
+}
+.invalid {
+    color: red;
+}
+
+
+/* Slideshow image styling */
+.slideshow {
+    margin-top: 20px;
+}
+.slideshow img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 6px;
+}
+
+/* animation effect */
+.ghost-canvas{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 40px auto 0 auto;
+}
+
+.ghost-body{
+    position: absolute;
+    height: 28%;
+    width: 22%;
+    background-color: white;
+    left: 40%;
+    top:  33%;
+  /*ANIMATION START*/
+    animation-name: floating;
+    animation-duration: 10s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+  /*ANIMATION END*/
+}
+.ghost-body-copy{
+    position: absolute;
+    height: 28%;
+    width: 22%;
+    background-color: white;
+    left: 40%;
+    top:  33%;
+    z-index: 1;
+}
+
+.ghost-head{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -50%;
+    background-color: white;
+    border-radius: 90px;
+    
+}
+.eye-right{
+    position: absolute;
+    height: 22%;
+    width: 20%;
+    right: 22%;
+    top: 40%;
+    background-color: black;
+    border-radius: 50%;
+}
+.eye-left{
+    position: absolute;
+    height: 22%;
+    width: 20%;
+    left: 22%;
+    top: 40%;
+    background-color: black;
+    border-radius: 50%;
+}
+.mouth{
+    position: absolute;
+    height: 26%;
+    width: 24%;
+    left: 38%;
+    top: 70%;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 2
+}
+.down-bubble{
+    position: absolute;
+    height: 55%;
+    width: 100%;
+    top:70%;
+}
+
+.bubble-1{
+    position: absolute;
+    height: 100%;
+    width:25%;
+    background-color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  /*ANIMATION START*/
+    animation-name: bubble;
+    animation-duration: 2.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+  /*ANIMATION END*/
+}
+.bubble-2{
+    position: absolute;
+    height: 100%;
+    width:25%;
+    left: 25%;
+    background-color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  /*ANIMATION START*/
+    animation-name: bubble;
+    animation-duration: 3.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+  /*ANIMATION END*/
+}
+.bubble-3{
+    position: absolute;
+    height: 100%;
+    width:25%;
+    right: 25%;
+    background-color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  /*ANIMATION START*/
+    animation-name: bubble;
+    animation-duration: 3.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+  /*ANIMATION END*/
+}
+.bubble-4{
+    position: absolute;
+    height: 100%;
+    width:25%;
+    right: 0;
+    background-color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  /*ANIMATION START*/
+    animation-name: bubble;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+  /*ANIMATION END*/
+}
+
+/*ANIMATION START*/
+@keyframes bubble{
+    0%{
+        top: 0;
+    }
+    50%{
+        top:20%;
+    }
+     100%{
+        top: 0;
+    }
+}
+@keyframes floating{
+    0%{top: 33%;}
+    30%{top: 40%;}
+    50%{top:33%;}
+    70%{top:25%;}
+    100%{top:33%;}
+}
+
+/* Shake Effect */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}

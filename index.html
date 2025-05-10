@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Week 6 Assignment</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/all.min.css">
+    <script src="script.js" defer></script>            
+</head>
+<body>
+    <section>
+        <h2>Week 6</h2>
+        <div class="tab-content">
+            <div class="tab-box">
+                <div class="tab-list active">
+                    <h3>Event Handling</h3>
+                </div>
+                <div class="tab-list">
+                    <h3>Interactive Elements</h3>
+                </div>
+                <div class="tab-list">
+                    <h3>Form Validation</h3>
+                </div>
+            </div>
+            <div class="tab-wrapper">
+                <!-- Tab 1: Event Handling -->
+                <div class="tab-item active">
+                    <h4>Event Handling</h4>
+                    <p>Click or hover on the buttons below, or press any key to see the interactions:</p>
+                    <button id="clickBtn">Click Me!</button>
+                    <button id="hoverBtn">Hover Over Me!</button>
+                    <div id="keyDisplay">Last Key Pressed: None</div>
+                    <!-- Bonus -->
+                    <button id="dblClickBtn">Double Click Me!</button>
+                </div>
+                <!-- Tab 2: Interactive Elements -->
+                <div class="tab-item">
+                    <h4>Interactive Elements</h4>
+                    <p>Use the button below to change the background color, and watch the slideshow below:</p>
+                    <button id="colorBtn">Change Background Color</button>
+                    <div class="slideshow">
+                        <img id="slide"
+                             src="https://via.placeholder.com/400x300/FF0000/FFFFFF?text=Image+1"
+                             alt="Slideshow Image" />
+                    </div>
+
+                    <!-- Ghost Animation (Bonus)-->
+                    <div class="ghost-canvas">
+                        <div class="ghost-body">
+                            <div class="ghost-body-copy"></div>
+                            <div class="ghost-head">
+                                <div class="eye-left"></div>
+                                <div class="eye-right"></div>
+                                <div class="mouth"></div>
+                            </div>
+                            <div class="down-bubble">
+                                <div class="bubble-1"></div>
+                                <div class="bubble-2"></div>
+                                <div class="bubble-3"></div>
+                                <div class="bubble-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab 3: Form Validation -->
+                <div class="tab-item">
+                    <h4>Form Validation</h4>
+                    <p>Fill out the form below. Required fields and invalid input will show validation messages:</p>
+                    <form id="sampleForm">
+                        <label>
+                            Name: <input type="text" id="name" required />
+                        </label>
+                        <span id="nameError" class="error"></span><br />
+                        <label>
+                            Email: <input type="email" id="email" required />
+                        </label>
+                        <span id="emailError" class="error"></span><br />
+                        <label>
+                            Password:
+                            <input type="password" id="password" required />
+                        </label>
+                        <ul id="passwordRules">
+                            <li id="ruleLength" class="invalid">Minimum 8 characters</li>
+                        </ul>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
